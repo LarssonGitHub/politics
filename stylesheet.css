@@ -1,0 +1,94 @@
+
+
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#removeStatsScreen button {
+    padding: 0.5em;
+    margin: 1em 0.3em;
+}
+
+#removeStatsScreen {
+    padding: 3em;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto 0;
+    text-align: center;
+    background-color: white;
+    border: 2px black double;
+}
+
+#battleInfoHtml {
+    border: 2px solid black;
+    min-height: 3em;
+    padding: 1em;
+    margin: 2em 4em;
+}
+
+
+#fakeLoading {
+    font-size: 2em;
+    padding: 1em;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: red, solid, 0.2em;
+    background-color: lightcoral;
+    opacity: 0.9;
+
+}
+#blockWhenShowingErr, #fakeLoadingBox, #gameOverScreen {     
+    position: fixed;  
+    top: 0;
+    height:100vh;
+    width: 100vw;
+    max-width:100%;
+    border: red, solid, 0.2em;
+    background-color: lightcoral;
+    opacity: 0.9;
+   
+}
+#blockWhenShowingErr > div, #fakeLoadingBox > div,#gameOverScreen > #Gameovertext{
+    background-color: white;
+    padding: 2em;
+    font-size: 2em;
+    display: inline;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+ #fakeLoadingBox {   
+    position: fixed;  
+    top: 0;
+    height:100vh;
+    width: 100vw;
+    max-width:100%;
+    border: red, solid, 0.2em;
+    background-color: lightcoral;
+    opacity: 0.9;
+}
+
+.choosenOpponentTrupen {
+background-image: url(images/Trupen.svg);
+}
+
+.choosenOpponentBoden {
+background-image: url(images/Boden.svg);
+}
+
+.choosenOpponentPlaceholder {
+background-image: url(images/Placeholder.jpeg);
+}
+
+#opponentSvg {
+
+z-index: 9999999999999999;
+width: 300px;
+height: 300px;   
+}
