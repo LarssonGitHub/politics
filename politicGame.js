@@ -123,8 +123,6 @@
             document.getElementById("startGame").addEventListener("click", function () {
                 if (totalPoints === 0) {
                     document.getElementById("removeStatsScreen").remove()
-                    const displayPlayableArea = document.getElementById("removePlayableArea");
-                    displayPlayableArea.style.display = "block";
                 } else {
                     popUpBox("Spend all your points first!")
                 }

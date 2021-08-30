@@ -1,8 +1,11 @@
-
-
 * {
     box-sizing: border-box;
-    text-align: center;
+}
+
+body {
+    background-image: url(images/whitehouse.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #removeStatsScreen button {
@@ -17,78 +20,188 @@
     top: 50%;
     transform: translate(-50%, -50%);
     margin: auto 0;
-    text-align: center;
     background-color: white;
-    border: 2px black double;
 }
-
-#battleInfoHtml {
-    border: 2px solid black;
-    min-height: 3em;
-    padding: 1em;
-    margin: 2em 4em;
-}
-
 
 #fakeLoading {
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 1em;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    border: red, solid, 0.2em;
-    background-color: lightcoral;
+    background-color: black;
     opacity: 0.9;
 
 }
-#blockWhenShowingErr, #fakeLoadingBox, #gameOverScreen {     
-    position: fixed;  
+
+#blockWhenShowingErr,
+#fakeLoadingBox,
+#gameOverScreen {
+    position: fixed;
     top: 0;
-    height:100vh;
+    height: 100vh;
     width: 100vw;
-    max-width:100%;
-    border: red, solid, 0.2em;
-    background-color: lightcoral;
+    max-width: 100%;
+    background-color: black;
     opacity: 0.9;
-   
+    z-index: 999999999999999999999999999;
 }
-#blockWhenShowingErr > div, #fakeLoadingBox > div,#gameOverScreen > #Gameovertext{
+
+#blockWhenShowingErr>div,
+#fakeLoadingBox>div,
+#gameOverScreen>#Gameovertext {
     background-color: white;
     padding: 2em;
-    font-size: 2em;
+    font-size: 1.5em;
     display: inline;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%)
 }
- #fakeLoadingBox {   
-    position: fixed;  
+
+#fakeLoadingBox {
+    position: fixed;
     top: 0;
-    height:100vh;
+    height: 100vh;
     width: 100vw;
-    max-width:100%;
-    border: red, solid, 0.2em;
-    background-color: lightcoral;
+    max-width: 100%;
+    background-color: black;
     opacity: 0.9;
 }
 
+
 .choosenOpponentTrupen {
-background-image: url(images/Trupen.svg);
+    background-image: url(images/Trupen.svg);
+
 }
 
 .choosenOpponentBoden {
-background-image: url(images/Boden.svg);
+    background-image: url(images/Boden.svg);
 }
 
 .choosenOpponentPlaceholder {
-background-image: url(images/Placeholder.jpeg);
+    background-image: url(images/Placeholder.jpeg);
 }
 
 #opponentSvg {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 130%;
+    height: 130%;
+    z-index: -999999999;
+}
 
-z-index: 9999999999999999;
-width: 300px;
-height: 300px;   
+
+#opponentStats {
+    background-color: rgba(250, 250, 250, 0.95);
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    padding: 1em;
+
+}
+
+#opponentContainer {
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#yourStatsScreen {
+    background-color: rgba(250, 250, 250, 0.95);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-self: start;
+    justify-self: end;
+    margin: 1em;
+    padding: 1em;
+}
+
+#yourStats {
+    padding: 1em;
+
+}
+
+#battleInfoHtml {
+    overflow: auto;
+    background-color: rgba(250, 250, 250, 1);
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 0 1em;
+    padding: 1em 5em;
+
+}
+
+/* TODO.... Fix display and shit... */
+#removePlayableArea {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 1fr auto;
+    gap: 1em;
+    /* this this this TODO TODO TODO */
+    height: 95vh;
+    width: 100vw;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+}
+
+h4 {
+    font-size: 2em;
+}
+
+h4 span {
+    color: brown;
+}
+
+
+h2 {
+    font-size: 3em;
+    text-decoration: underline;
+}
+
+#buttonContainer {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    text-align: center;
+}
+
+#buttonContainer button,
+p,
+#removeStatsScreen>button {
+    font-size: 1.4em;
+}
+
+#buttonContainer button {
+    padding: 1em;
+}
+
+.centerText {
+    text-align: center;
+}
+
+#removeStatsScreen {
+    position: fixed;
+    z-index: 999999999999999;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    padding: 0 10rem;
+    max-width: 100%;
+    max-height: 100%;
 }
